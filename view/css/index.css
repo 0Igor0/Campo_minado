@@ -1,0 +1,81 @@
+#caixa-titulo{
+
+    position: absolute;
+    left: 700px;
+}
+
+
+
+
+
+
+
+
+#caixa_campoMinado{
+
+    position: absolute;
+    left: 200px;
+    top: 100px;
+}
+#areaCampoMinado{
+    width:558px;
+    height: 433px;
+    border:solid 3px black;
+    position: absolute;
+    
+}
+
+
+
+.caixaCampo{
+    display: inline-block;
+}
+
+
+.fadeOut{
+color: #ffffff00;
+
+}
+
+p{
+    margin-top: 5px;
+    color: black;
+}
+
+
+.campo{
+    height: 60px;
+    width: 60px;
+    border: black 1px solid;
+    display: inline-block;
+    background-color: wheat;
+    text-align: center;
+}
+#teste{
+    background-color: aquamarine;
+}
+
+.teste{
+    height: 60px;
+    width: 60px;
+    border: black 1px solid;
+    display: inline-block;
+    background-color: wheat;
+}
+
+.caixa-centro{
+    position: relative;
+	width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+.titulo-principal{
+    top: 10px;
+    left: 200px;
+    font-family: Candara;
+    position: absolute;
+}
+
+.invisivel{
+    opacity: 0;
+}

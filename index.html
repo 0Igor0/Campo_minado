@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Minado</title>
+    <link rel="stylesheet" href="view/css/index.css">
+    <link rel="stylesheet" href="view/css/alert.css">
+
+
+
+</head>
+<body>
+
+    <div class="caixa-centro">
+        <h1 class="titulo-principal">
+            Campo Minado
+        </h1>
+    
+            <div id="caixa_campoMinado">
+                <div id="areaCampoMinado">
+		
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+
+<div id="caixa_alert_principal">
+<div id="popupDiv" class="dialogDiv">
+    <div id="div_bomba_chorando">
+        <img id="bomba_chorando" src="view/img/bomba_chorando.png" alt="">
+    </div>
+    <div id="div_bomba_feliz">
+        <img id="bomba_feliz" src="view/img/bomba_feliz.png" alt="">
+    </div>
+    
+    <div id="popupSubDiv" class="dialogSubDiv">
+        <div class="dialogHeader">
+           
+            <h4 id="popupTitle" class="dialogTextTitle"></h4>
+        </div>
+        <div class="dialogTextDiv">
+            <p id="popupText" class="dialogText"></p>
+        </div>
+        <div class="dialogButtons">
+            <button class="botoes-alert" onclick="jogarNovamente()" id="btn1" type="button" class="btn btn-default"></button>
+            <button class="botoes-alert" onclick="sair()" id="btn2" type="button" class="btn btn-primary"></button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="control/Alerta.js"></script>
+<script src="control/funcoesVerifica.js"></script>
+<script src="control/funcoesDoJogo.js"></script>
+<script src="control/CriaElementos.js"></script>
+<script src="model/campos.js"></script>
+<script src="control/index.js"></script>
+<script src="control/primeiroClique.js"></script>
+
+</body>
+</html>
