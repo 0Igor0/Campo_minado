@@ -7,25 +7,22 @@
     <title>Campo Minado</title>
     <link rel="stylesheet" href="view/css/index.css">
     <link rel="stylesheet" href="view/css/alert.css">
-
-
-
 </head>
 <body>
 
-    <div class="caixa-centro">
-        <h1 class="titulo-principal">
+
+    <div class="caixa-centro"><!--Caixa centro: essa div serve somente para englobar todos os items do site e centralizar no meio-->
+        <h1 class="titulo-principal"><!--titulo-principal: título principal-->
             Campo Minado
         </h1>
-                <div id="caixa_campoMinado">
-                <div id="areaCampoMinado">
-		
+            <div id="div-posicionadora"><!--div-posicionadora: serve somente para posicionar a area do jogo-->
+                <div id="areaCampoMinado"><!--areaCampoMinado: é a area onde acontece o jogo, (os cliques do usuario)-->
                 </div>
             </div>
     </div>
-</div>
-</div>
 
+
+<!--Daqui para baixo o código inteiro é só dos popups de vitória e derrota-->
 <div id="caixa_alert_principal">
 <div id="popupDiv" class="dialogDiv">
     <div id="div_bomba_chorando">
@@ -34,10 +31,8 @@
     <div id="div_bomba_feliz">
         <img id="bomba_feliz" src="view/img/bomba_feliz.png" alt="">
     </div>
-    
     <div id="popupSubDiv" class="dialogSubDiv">
         <div class="dialogHeader">
-           
             <h4 id="popupTitle" class="dialogTextTitle"></h4>
         </div>
         <div class="dialogTextDiv">
@@ -49,7 +44,6 @@
         </div>
     </div>
 </div>
-</body>
 
 <script src="control/Alerta.js"></script>
 <script src="control/funcoesVerifica.js"></script>

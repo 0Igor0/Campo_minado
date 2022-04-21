@@ -24,33 +24,21 @@ function criarElementos(){
             caixaCampo[x].classList.add("caixaCampo")
             CaixaElementoX=document.createElement("div")
             elementoX=document.createElement("p")
-            
             CaixaElementoX.appendChild(elementoX)
-
-
             divCampo[x]=new campos(CaixaElementoX, x, false, true,false,0,false,false); //até agora esse elementoX é o divCampo[x].elemento html, e é uma div vazia
-            
-
             caixaCampo[x].appendChild(divCampo[x].elementoHtml)
-
             divTeste=document.createElement("div")
-   
             AreaCampoMinado.appendChild(caixaCampo[x])
             divCampo[x].elementoHtml.textContent=divCampo[x].id +10;
             divCampo[x].elementoHtml.classList.add("campo")
             divCampo[x].elementoHtml.classList.add("fadeOut")
-
             copia_P[x]=document.createElement("p")
             Pdivcampo[x]=document.createElement("p")
             divCampo[x].elementoHtml.appendChild(copia_P[x])
             copia_P[x].textContent=divCampo[x].id
             copia_P[x].classList.add("invisivel")
-          
            
-            verificaImpar(divCampo[x])
-
-     
-     
+            verificaImpar(divCampo[x])  
             x++
         }
 }
@@ -76,20 +64,12 @@ function criarElementos(){
                 if(divCampo[x].bomba==false){
                     divCampo[x]._bomba=true;
                     aBomba=divCampo[x]
-          
                 }
                
                 y++
                a =  x
               }
-
-
-
         if(divCampo[x].id==bombas[1]){
-
-            
-
-
             if(divCampo[x].bomba==true){
         
                 bombas[1]+=1
@@ -98,23 +78,18 @@ function criarElementos(){
             if(divCampo[x].bomba==false){
                 divCampo[x]._bomba=true;
                 bBomba=divCampo[x]
-
             }
-      
             b =  x
             y++
         }
   
         if(divCampo[x].id==bombas[2]){
             if(divCampo[x].bomba==true){
-                
                 bombas[2]+=1
-                
             }
             if(divCampo[x].bomba==false){
                 divCampo[x]._bomba=true
                 cBomba=divCampo[x]
-                
             }
 
             y++
@@ -122,16 +97,13 @@ function criarElementos(){
         }
         if(divCampo[x].id==bombas[3]){
             if(divCampo[x].bomba==true){
-    
                 bombas[3]+=1
-          
             }
             if(divCampo[x].bomba==false){
                 divCampo[x]._bomba=true;
                  dBomba=divCampo[x]
-        
             }
-       
+    
              d =  x
              y++
         }
@@ -146,8 +118,6 @@ function criarElementos(){
             }
             z++
         }
-
-
-           }
+}
 
            
