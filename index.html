@@ -10,17 +10,21 @@
 </head>
 <body>
 
-
     <div class="caixa-centro"><!--Caixa centro: essa div serve somente para englobar todos os items do site e centralizar no meio-->
         <h1 class="titulo-principal"><!--titulo-principal: título principal-->
             Campo Minado
         </h1>
+        <div class="placar"><!--titulo-principal: título principal-->
+            <img src="view/img/bombaContador.png" class="imgPlacar" id="imgPlacar1" alt="">
+            <p id="contador-bombas" class="contador">4</p>
+            <img src="view/img/relogio.png" class="imgPlacar" id="imgPlacar2" alt="">
+            <p id="contadorRelogio" class="contador">0</p>
+        </div>
             <div id="div-posicionadora"><!--div-posicionadora: serve somente para posicionar a area do jogo-->
                 <div id="areaCampoMinado"><!--areaCampoMinado: é a area onde acontece o jogo, (os cliques do usuario)-->
                 </div>
             </div>
     </div>
-
 
 <!--Daqui para baixo o código inteiro é só dos popups de vitória e derrota-->
 <div id="caixa_alert_principal">
@@ -45,12 +49,12 @@
     </div>
 </div>
 
-<script src="control/Alerta.js"></script>
+<script src="control/Pop-ups.js"></script>
 <script src="control/funcoesVerifica.js"></script>
-<script src="control/funcoesDoJogo.js"></script>
+<script src="control/funcoesFinalDoJogo.js"></script>
 <script src="control/CriaElementos.js"></script>
 <script src="model/campos.js"></script>
-<script src="control/index.js"></script>
+<script src="control/IniciaOJogo.js"></script>
 <script src="control/primeiroClique.js"></script>
 
 </body>

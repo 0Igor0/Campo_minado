@@ -1,7 +1,9 @@
-
-
+var bombasPertoArray=[]
+var camposProibidos=[]
+var camposBeiradaDireita=[8,17,26,35,44,53,62]
+var camposBeiradaEsquerda=[0,9,18,27,36,45,54]
+  
  function verificaImpar(){
-
 
     if(divCampo[x].id % 2 == 0){
         divCampo[x]._impar=false
@@ -26,7 +28,6 @@ var bombasPertoArray=[]
 
     var x=0
 
-
     while(x<7){
         if(divCampo[valore].id==camposBeiradaDireita[x]){
             bombasPertoArray.splice(7,1)
@@ -49,8 +50,7 @@ x=0
             bombasPertoArray.splice(6,1)
             bombasPertoArray.splice(4,1)
             bombasPertoArray.splice(3,1)
-           
-  
+      
             divCampo[valore].beirada=true
         }
         else{
@@ -61,16 +61,29 @@ x=0
 if(arrayPassado==''){
     return bombasPertoArray
 
-
 }else{
 
     alert(arrayPassado)
 }
-
-
 } 
+    function verificaBomba(valor){
+    
+        if(valor._bomba==false){
+              valor.elementoHtml.style.backgroundColor = "#daccb1";
+              if(valor._impar==true){
+                 valor.elementoHtml.style.backgroundColor = "#aca18d";
+             }
+     
+         }
+         else{
+            perdeu()
+             
+         }
+     } 
+    
+     
 
-
+     
 function avisaBombasPerto(valor){
     var x=0
     var y=0
@@ -83,16 +96,14 @@ function avisaBombasPerto(valor){
                         
                         divCampo[x]._bombasProximas+=1
                         copia_P[x].textContent=divCampo[x].bombasProximas
+                        copia_P[x].classList.add("bombasProximas2")
                         alteraTextoPrimeirosCliques()
                         x=0
                         y++
                     }
                     else{
 
-                    }
-
-                  
-                    
+                    }    
                 }
             }
             else{
@@ -105,4 +116,3 @@ function avisaBombasPerto(valor){
             }
         }
     }
-    

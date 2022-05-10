@@ -1,24 +1,22 @@
-var a=[]
-var b=[]
-var c=[]
-var d=[]
+/*EXPLICANDO ARQUIVO:
+
+CriaElementos.js:
+    Aqui a gente cria os elementos, na função criaElementos, criamos os quadrados do jogo, que são os campos, e no criar bomas criamos as bombas
+*/
 
 var elementoX=0
 var CaixaElementoX=0
 var divTeste=0
-
 var Pdivcampo=[]
 var copia_P=[]
-var aBomba=0
-var bBomba=0
-var cBomba=0
-var dBomba=[]
+
 function criarElementos(){
     var z=0
         while(z<4){
             bombas[z]= Math.floor(Math.random() * 63)
             z++
         }
+
         while(x<63){
             caixaCampo[x]=document.createElement("div")
             caixaCampo[x].classList.add("caixaCampo")
@@ -27,7 +25,6 @@ function criarElementos(){
             CaixaElementoX.appendChild(elementoX)
             divCampo[x]=new campos(CaixaElementoX, x, false, true,false,0,false,false); //até agora esse elementoX é o divCampo[x].elemento html, e é uma div vazia
             caixaCampo[x].appendChild(divCampo[x].elementoHtml)
-            divTeste=document.createElement("div")
             AreaCampoMinado.appendChild(caixaCampo[x])
             divCampo[x].elementoHtml.textContent=divCampo[x].id +10;
             divCampo[x].elementoHtml.classList.add("campo")
@@ -37,29 +34,24 @@ function criarElementos(){
             divCampo[x].elementoHtml.appendChild(copia_P[x])
             copia_P[x].textContent=divCampo[x].id
             copia_P[x].classList.add("invisivel")
-           
+            copia_P[x].classList.add("bombasProximas")
             verificaImpar(divCampo[x])  
             x++
         }
-}
-    
+
+    }
 
 
-
-    function criarBombas(){
+function criarBombas(){
         var x=0 
         var y=0
         protegePrimeiroClique()
         
         
         while(x<63){
-            if(divCampo[x].id==bombas[0]){
-
-              
+            if(divCampo[x].id==bombas[0]){             
                 if(divCampo[x].bomba==true || divCampo[x].permissao==false){
-    
                     bombas[0]+=7
-          
                 }
                 if(divCampo[x].bomba==false){
                     divCampo[x]._bomba=true;
@@ -71,9 +63,7 @@ function criarElementos(){
               }
         if(divCampo[x].id==bombas[1]){
             if(divCampo[x].bomba==true){
-        
                 bombas[1]+=1
-       
             }
             if(divCampo[x].bomba==false){
                 divCampo[x]._bomba=true;

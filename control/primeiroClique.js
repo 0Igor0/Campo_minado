@@ -1,11 +1,16 @@
 
 function primeiroClique(primeiroCampo,primeiroCampoSemIndice){
+
+    var n = 0;
+    var l = document.getElementById("contadorRelogio");
+    window.setInterval(function(){
+      l.innerHTML = n;
+      n++;
+    },1000);
+
     var y=primeiroCampo.id
-
     var controleArray=0
-    var x=0
-
-   
+    var x=0 
 
     camposIniciais[0]=y-10
     camposIniciais[1]=y-9
@@ -46,24 +51,15 @@ function primeiroClique(primeiroCampo,primeiroCampoSemIndice){
     }
 }
 
-
  function protegePrimeiroClique(){
 var y=0
 var x=0
 
 while(x<63){
 while(y<camposProibidos.length){
-
-
-
     if(divCampo[x].id==camposProibidos[y]){
        divCampo[x]._bomba=true
-       divCampo[x]._primeiroClique=true
-
-
-
-     
-       
+       divCampo[x]._primeiroClique=true   
     }
     y++
    
@@ -71,32 +67,26 @@ while(y<camposProibidos.length){
 y=0
 x++
 }
-
 }
-
-
 function alteraTextoPrimeirosCliques(){
 var y=0
 var x=0
 
 while(x<63){
 while(y<camposIniciais.length){
-
-
-
     if(divCampo[x].id==camposIniciais[y]){
         if(divCampo[x].bombasProximas >=1 ){
             copia_P[x].classList.remove("invisivel")
-        }
-        
-        
+        }               
     }
     y++
-   
 }
 y=0
 x++
 }
+}
+
+function AtivaRelogio(){
 
 }
 
@@ -111,7 +101,6 @@ function ajustaPrimeiroClique(campoPassado){
             campoPassado.beirada=true
         }
         else{
-
         }
         x++
     }
@@ -124,8 +113,7 @@ x=0
             camposIniciais.splice(7,1)
             camposIniciais.splice(6,1)
             camposIniciais.splice(0,1)
-            
-           
+  
             ajusteEsquerda=true
             campoPassado.beirada=true
         }
@@ -141,7 +129,6 @@ x=0
         divCampo[campoPassado.id+2].bomba=true
         divCampo[campoPassado.id-7].bomba=true
         divCampo[campoPassado.id+11].bomba=true
-
 
         camposProibidos.splice(7,1)
         camposProibidos.splice(6,1)

@@ -19,8 +19,10 @@
 #areaCampoMinado{
     width:558px;
     height: 433px;
-    border:solid 3px black;
+    border:solid 3.5px black;
     position: absolute;
+    top: 2px;
+    left: 1px;
 }
 
 
@@ -73,7 +75,68 @@ p{
     font-family: Candara;
     position: absolute;
 }
+.placar{
+    width: 250px;
+    height: 85px;
+    top: 10px;
+    left: 550px;
+    font-family: Candara;
+    position: relative;
 
+}
 .invisivel{
     opacity: 0;
+}
+.imgPlacar{
+    position: absolute;
+    width: 50px;
+    height: 60px;
+}
+#imgPlacar1{
+    top: 10px;
+    left:0px;
+}
+#imgPlacar2{
+    top: 10px;
+    left:100px;
+}
+.contador{
+    position: absolute;
+    top: 15px;
+
+    font-weight: bold;
+    font-size: 30px;
+}
+#contador-bombas{
+
+    left:50px;
+
+}
+#contadorRelogio{
+
+    left:155px;
+
+}
+.bombasProximas{
+    position: relative;
+    top: -10px;
+    font-size: 35px;
+}
+.bombasProximas1{
+    position: relative;
+    top: -10px;
+    font-size: 35px;
+    color: red;
+}
+.bombasProximas2{
+    position: relative;
+    top: -10px;
+    font-size: 35px;
+    color: red;
+}
+.bombasProximas3{
+    position: relative;
+    top: -10px;
+    font-size: 35px;
+    color: red;
 }
